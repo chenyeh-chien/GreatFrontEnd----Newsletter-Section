@@ -24,6 +24,17 @@ export default function SubscribeForm({ header, conditions }: Props) {
                         )
                     })
                 }
+                <form>
+                    <div className='subscribe-form__input'>
+                        <input 
+                            type='input'
+                            placeholder='Enter your email' />
+                        <label>We only send you the best! No spam.</label>
+                    </div>
+                    <div>
+                        <button>Subscribe</button>
+                    </div>
+                </form>
             </article>
             <figure className='subscribe-form__figure'>
                 <img src={ image }/>

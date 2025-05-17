@@ -1,11 +1,62 @@
 .subscribe-form {
   display: flex;
+  flex-wrap: wrap;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   
   .subscribe-form__info {
     flex: 1;
+    padding: 3rem;
+    color: #68686c;
+    font-size: 0.8em;
+    box-sizing: border-box;
+
+    h1 {
+        font-size: 3em;
+        color: black;
+    }
+
+    form {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+
+        .subscribe-form__input {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            input {
+                width: 20rem;
+                height: 2rem;
+                border-radius: 4px;
+                border: 1px solid #cbcbd7;
+                text-indent: 0.5rem;
+                outline-color: #68686c;
+                color: #68686c;
+                
+                &::placeholder {
+                    color: #9f9fad;
+                }
+            }
+        }
+
+        button {
+            height: 2rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #5846bf;
+            color: white;
+            padding: 0 0.8rem;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #4735a9;
+            }
+        }
+    }
 
     .subscribe-form__list--item {
         display: flex;
@@ -19,7 +70,7 @@
     flex-shrink: 1;
 
     img {
-        width: 100%;
+        width: 30rem;
         border-radius: 16px;
     }
   }
@@ -27,14 +78,14 @@
 
 @media screen and (min-width: 375px) {
     .subscribe-form {
-        width: 100%;
+        width: max-content;
         padding: 16px;
     }
 } 
 
 @media screen and (min-width: 768px) {
     .subscribe-form {
-        width: 100%;
+        width: 90%;
         padding: 32px;
     }
 }
