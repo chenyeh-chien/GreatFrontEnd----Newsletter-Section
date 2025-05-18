@@ -4,11 +4,18 @@ import './App.css'
 function App() {
   const header = 
     "Get the finest curated abstracts delivered weekly to your inbox";
-  const conditions = [
-    "Exlusive access to new abstract images and collections",
-    "Unlock special promotions only for subscribers",
-    "Regular doses of artistic inspiration"
-  ]
+  const conditions = [{
+    id: 0,
+    message: "Exlusive access to new abstract images and collections",
+  },
+  {
+    id: 1,
+    message: "Unlock special promotions only for subscribers",
+  },
+  {
+    id: 2,
+    message: "Regular doses of artistic inspiration"
+  }]
 
   return (
     <div className='app'>
