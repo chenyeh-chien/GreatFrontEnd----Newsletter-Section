@@ -1,0 +1,30 @@
+.alert-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7em;
+
+    .alert-message__content {
+        display: flex;
+        gap: 0.3rem;
+        border-radius: 16px;
+        padding: 0.2rem;
+        background-color: #ededed;
+        font-weight: 700;
+
+        .alert-message__category {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            background-color: white;
+            color: gray;
+        }
+
+        .alert-message__message {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            color: #3b3939;
+        }
+    }
+}
