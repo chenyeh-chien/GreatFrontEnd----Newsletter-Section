@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import SuccessMessage from '../Alert Message/Success/SuccessMessage';
+import ErrorMessage from '../Alert Message/Error/ErrorMessage';
 import './SubscribeForm.scss';
 import image from '../../assets/abstract.jpg';
 
@@ -90,7 +91,7 @@ export default function SubscribeForm({ header, conditions }: Props) {
                         "content-type": "application/json"
                     },
                     body: JSON.stringify({
-                        email: "samddd6718"
+                        email
                     })
                 }
             )
@@ -138,9 +139,15 @@ export default function SubscribeForm({ header, conditions }: Props) {
         <div className='subscribe-form'>
             {
                 showMessage &&
-                <SuccessMessage 
-                    category={category}
-                    message={message}/>
+                (
+                    category === 'Success' 
+                    ? <SuccessMessage 
+                            category={category}
+                            message={message}/>
+                    : <ErrorMessage
+                            category={category}
+                            message={message}/>
+                )
             }
             <div className='subscribe-form__content'>
                 <article className='subscribe-form__info'>

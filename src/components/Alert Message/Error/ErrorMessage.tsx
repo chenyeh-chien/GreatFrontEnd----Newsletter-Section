@@ -5,13 +5,13 @@ interface Props {
     message: string;
 }
 
-export default function SuccessMessage({ category, message }: Props) {
+export default function ErrorMessage({ category, message }: Props) {
     return (
         <AlertMessage 
             category={category}
             message={message} 
-            categoryColor="#22b07a"
-            messageColor="#128e5f"
-            containerBgColor="#e6fcf4"/>
+            categoryColor="#a82f17"
+            messageColor="#dc3e1f"
+            containerBgColor="#fdefed"/>
     )
 }
